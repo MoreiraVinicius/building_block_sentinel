@@ -1,0 +1,26 @@
+## Inserção de dados randomicos de mudança de estado da jornada
+
+__Nome da tabela__: sentinel-tb
+
+__numItems__ que define o número de jornadas a serem criadas.
+O valor padrão é 1.
+
+### Executar o Programa:
+
+Compile o programa com go build -o dynamodb_batch_writer.
+Execute o programa especificando o número de itens, se necessário:
+
+```bash
+./insertItemsDynamodb -numItems=10  
+```
+
+```bash
+go run /scripts/insertItemsDynamodb/main.go -numItems=10
+```
+
+Ja existe um binario windows amd64 para uso
+
+Se você não especificar -numItems, será usado o valor padrão 1.
+Debugging e Execução:
+
+O programa irá imprimir o JSON gerado para itens do DynamoDB e tentará executar o comando AWS CLI. Inspecione a saída do comando para verificar o sucesso

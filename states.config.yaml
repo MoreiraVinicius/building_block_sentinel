@@ -1,0 +1,88 @@
+name: Monitoramento PIX  
+states:  
+  inicial:  
+    code: "INCLUIDO"  
+    name: "Incluído"  
+    description: ""  
+
+  intermediate:  
+    - code: "EM_PROCESSAMENTO"  
+      name: "Em Processamento"  
+      opcional: false  
+      description: ""  
+    - code: "AUTORIZADO"  
+      name: "Autorizado"  
+      opcional: false  
+      description: ""  
+    - code: "NAO_AUTORIZADO"  
+      name: "Não Autorizado"  
+      opcional: true  
+      description: ""  
+    - code: "PENDENTE_EFETIVACAO"  
+      name: "Pendente Efetivação"  
+      opcional: true  
+      description: ""  
+    - code: "ANALISE_FRAUDE"  
+      name: "Análise Fraude"  
+      opcional: true  
+      description: ""  
+    - code: "AGENDADO"  
+      name: "Agendado"  
+      opcional: true  
+      description: ""  
+
+  final:  
+    - code: "EFETIVADO"  
+      name: "Efetivado"  
+      description: ""  
+    - code: "CANCELADO"  
+      name: "Cancelado"  
+      description: ""  
+    - code: "REJEITADO"  
+      name: "Rejeitado"  
+      description: ""  
+    - code: "EXPIRADO"  
+      name: "Expirado"  
+      description: ""  
+      reasons:  
+        - code: "FALTA_DE_SALDO"  
+          name: "Falta de Saldo"  
+          description: ""  
+        - code: "BLOQUEIO_JUDICIAL"  
+          name: "Bloqueio Judicial"  
+          description: ""  
+        - code: "ESTOURO_LIMITE_DIARIO"  
+          name: "Estouro Limite Diário"  
+          description: ""  
+        - code: "SEM_MOTIVO"  
+          name: "Sem Motivo"  
+          description: ""  
+
+  error:  
+    - code: "AB03"  
+      name: "AB03 - Tempo maximo de transação excedido"  
+      description: ""  
+    - code: "AB11"  
+      name: "AB11 - Tempo maximo de transação excedido"  
+      description: ""  
+    - code: "AG07"  
+      name: "Lentidão no sistema"  
+      description: ""  
+    - code: "ED05"  
+      name: "Erro ao verificar extrato"  
+      description: ""  
+    - code: "BE17"  
+      name: "CPF/CNPJ do favorecido incorreto"  
+      description: ""  
+    - code: "T94"  
+      name: "Erro interno - Fluxo Limites"  
+      description: ""  
+    - code: "T91"  
+      name: "Proposto Giro não efetivada"  
+      description: ""  
+    - code: "T92"  
+      name: "Erro Interno - Fluxo Giro"  
+      description: ""  
+    - code: "T93"  
+      name: "PIX Parcelado autorizado - Legado"  
+      description: ""
